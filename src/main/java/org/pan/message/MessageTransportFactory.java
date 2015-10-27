@@ -1,6 +1,5 @@
 package org.pan.message;
 
-import org.pan.message.impl.JSSCSerialPortTransport;
 import org.pan.message.impl.TCPTransport;
 
 /**

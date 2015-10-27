@@ -13,12 +13,12 @@ import java.io.OutputStream;
 /**
  * Created by xiaopan on 2015/10/14 0014.
  */
-public class JSSCSerialPortTransport extends AbstractMessageTransport implements MessageTransport {
+public class RXTXSerialPortTransport extends AbstractMessageTransport implements MessageTransport {
 
     private DeviceAddress deviceAddress;
     private RXTXPort serialPort;
 
-    public JSSCSerialPortTransport(DeviceAddress deviceAddress) {
+    public RXTXSerialPortTransport(DeviceAddress deviceAddress) {
         this.deviceAddress = deviceAddress;
     }
 
