@@ -8,7 +8,7 @@ import javafx.scene.image.Image;
 import java.util.Optional;
 
 /**
- * javafx 常用的弹出窗口
+ * javafx 寮瑰嚭绐楀彛
  * Created by fangjinliu on 2015/10/26.
  */
 public class Alerts {

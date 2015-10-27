@@ -1,7 +1,7 @@
 package org.pan.utils;
 
 /**
- * 字节与字符工具
+ * 瀛楄妭宸ュ叿
  * Created by fangjinliu on 2015/10/26.
  */
 public class ByteUtils {

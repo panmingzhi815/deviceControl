@@ -1,9 +1,7 @@
 package org.pan.message;
 
-import com.sun.xml.internal.messaging.saaj.packaging.mime.MessagingException;
 import gnu.io.PortInUseException;
 import gnu.io.UnsupportedCommOperationException;
-import jssc.SerialPortException;
 
 import java.io.IOException;
 
@@ -12,9 +10,9 @@ import java.io.IOException;
  */
 public interface MessageTransport {
 
-    void open() throws IOException, PortInUseException, UnsupportedCommOperationException, MessagingException;
+    void open() throws IOException, PortInUseException, UnsupportedCommOperationException;
 
-    void close() throws IOException, SerialPortException, MessagingException;
+    void close() throws IOException;
 
     void sendMessageNoReturn(byte[] data) throws IOException;
 

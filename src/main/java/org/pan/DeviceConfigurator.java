@@ -9,7 +9,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 /**
- * Éè±¸ÅäÖÃÎÄ¼ş
+ * é»˜è®¤é…ç½®æ–‡ä»¶
  * Created by fangjinliu on 2015/10/26.
  */
 public class DeviceConfigurator {
@@ -82,7 +82,7 @@ public class DeviceConfigurator {
         try {
             Files.createFile(Paths.get(configFileName));
         } catch (IOException e) {
-            throw new RuntimeException("´´½¨ÅäÖÃÎÄ¼şÊ§°Ü",e);
+            throw new RuntimeException("åˆ›å»ºé…ç½®æ–‡ä»¶æ—¶å‘ç”Ÿé”™è¯¯",e);
         }
 
         final String powerOnBytes = "powerOnBytes";
@@ -117,7 +117,7 @@ public class DeviceConfigurator {
             propertiesConfiguration.setEncoding("utf-8");
             propertiesConfiguration.save(configFileName);
         } catch (ConfigurationException e) {
-            throw new RuntimeException("¼ÓÔØÅäÖÃÎÄ¼ş³ö´í",e);
+            throw new RuntimeException("å†™å…¥é…ç½®æ–‡ä»¶æ—¶å‘ç”Ÿé”™è¯¯",e);
         }
     }
 }
