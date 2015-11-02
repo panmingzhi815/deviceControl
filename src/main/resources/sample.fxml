@@ -37,7 +37,7 @@
                     <Font size="15.0"/>
                 </font>
             </Button>
-            <Button onAction="#noneModel_onAction" mnemonicParsing="false" prefWidth="100.0" text="无色模式">
+            <Button onAction="#noneModel_onAction" mnemonicParsing="false" prefWidth="100.0" text="六色模式">
                 <font>
                     <Font size="15.0"/>
                 </font>

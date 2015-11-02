@@ -73,7 +73,7 @@ public class Controller implements Initializable {
         try{
             final String noneModelBytes = this.deviceConfigurator.getNoneModelBytes();
             final String noneModelColor = this.deviceConfigurator.getNoneModelColor();
-            sendMessage(noneModelBytes,noneModelColor,"无色模式");
+            sendMessage(noneModelBytes,noneModelColor,"六色模式");
             LOGGER.info("开始切换无色模式成功");
         }catch (Exception e){
             LOGGER.error("开始切换无色模式失败",e);

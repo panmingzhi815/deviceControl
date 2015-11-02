@@ -11,6 +11,7 @@ import java.net.InetSocketAddress;
 import java.net.Socket;
 
 /**
+ * TCP通讯底层
  * Created by xiaopan on 2015/10/14 0014.
  */
 public class TCPTransport extends AbstractMessageTransport implements MessageTransport {

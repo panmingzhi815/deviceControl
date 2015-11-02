@@ -11,6 +11,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 /**
+ * 串口通讯底层
  * Created by xiaopan on 2015/10/14 0014.
  */
 public class RXTXSerialPortTransport extends AbstractMessageTransport implements MessageTransport {
