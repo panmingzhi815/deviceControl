@@ -3,10 +3,8 @@ package org.pan;
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.PropertiesConfiguration;
 
+import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 /**
  * 默认配置文件
@@ -80,7 +78,8 @@ public class DeviceConfigurator {
 
     public static void main(String[] args) {
         try {
-            Files.createFile(Paths.get(configFileName));
+            File file = new File(configFileName);
+            file.createNewFile();
         } catch (IOException e) {
             throw new RuntimeException("创建配置文件时发生错误",e);
         }
