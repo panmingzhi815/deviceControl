@@ -33,6 +33,9 @@ public class DeviceUI extends Component{
     private JComboBox 串口ComboBox;
     private JPanel panel;
     private JLabel lbl_state;
+    private JPanel powerPane;
+    private JPanel statePane;
+    private JPanel modelPane;
 
     public DeviceUI() {
         try {
@@ -135,7 +138,11 @@ public class DeviceUI extends Component{
                 throw new Exception("发送消息失败", e);
             }
 
-            panel.setBackground(Color.decode(color));
+            Color decode = Color.decode(color);
+            panel.setBackground(decode);
+            statePane.setBackground(decode);
+            powerPane.setBackground(decode);
+            modelPane.setBackground(decode);
             lbl_state.setText("当前状态：" + state);
         } finally {
             try {
@@ -149,18 +156,8 @@ public class DeviceUI extends Component{
     }
 
     public static void createAndShowGUI() {
-        try {
-            UIManager.setLookAndFeel("Nimbus");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (UnsupportedLookAndFeelException e) {
-            e.printStackTrace();
-        }
         JFrame frame = new JFrame("DeviceUI");
+        frame.setTitle("幻彩魔方");
         frame.setContentPane(new DeviceUI().panel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
