@@ -26,5 +26,14 @@
     <orderEntry type="library" name="Maven: asm:asm:3.0" level="project" />
     <orderEntry type="library" name="Maven: com.jgoodies:forms:1.1-preview" level="project" />
     <orderEntry type="library" name="Maven: jdom:jdom:1.0" level="project" />
+    <orderEntry type="module-library">
+      <library name="Maven: com.intellij:uiDesigner:1.0">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/com.intellij/uiDesigner/1.0/uiDesigner-1.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>

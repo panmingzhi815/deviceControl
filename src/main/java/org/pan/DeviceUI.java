@@ -1,5 +1,8 @@
 package org.pan;
 
+import com.intellij.uiDesigner.core.GridConstraints;
+import com.intellij.uiDesigner.core.GridLayoutManager;
+import com.intellij.uiDesigner.core.Spacer;
 import gnu.io.PortInUseException;
 import gnu.io.UnsupportedCommOperationException;
 import org.apache.commons.configuration.ConfigurationException;
@@ -19,7 +22,7 @@ import java.io.IOException;
 /**
  * Created by Administrator on 2015/11/2.
  */
-public class DeviceUI extends Component{
+public class DeviceUI extends Component {
     private final Logger LOGGER = LoggerFactory.getLogger(DeviceUI.class);
     private final String loadConfigFileErrorTips = "加载必须要设备命令配置参数失败！请检查文件内容是否完整：" + DeviceConfigurator.configFileName;
 
@@ -41,7 +44,7 @@ public class DeviceUI extends Component{
         try {
             this.deviceConfigurator = DeviceConfigurator.getInstance();
         } catch (ConfigurationException e) {
-            LOGGER.error(loadConfigFileErrorTips,e);
+            LOGGER.error(loadConfigFileErrorTips, e);
             JOptionPane.showMessageDialog(null, loadConfigFileErrorTips, "错误", JOptionPane.OK_OPTION);
         }
 
@@ -54,7 +57,7 @@ public class DeviceUI extends Component{
                     sendMessage(powerOffBytes, powerOffColor, "关闭");
                     LOGGER.info("关闭成功");
                 } catch (Exception ex) {
-                    LOGGER.error("关闭失败",e);
+                    LOGGER.error("关闭失败", e);
                     JOptionPane.showMessageDialog(null, ex.getMessage(), "操作失败", JOptionPane.OK_OPTION);
                 }
             }
@@ -68,7 +71,7 @@ public class DeviceUI extends Component{
                     sendMessage(powerOffBytes, powerOffColor, "关闭");
                     LOGGER.info("关闭成功");
                 } catch (Exception ex) {
-                    LOGGER.error("关闭失败",e);
+                    LOGGER.error("关闭失败", e);
                     JOptionPane.showMessageDialog(null, ex.getMessage(), "操作失败", JOptionPane.OK_OPTION);
                 }
             }
@@ -96,7 +99,7 @@ public class DeviceUI extends Component{
                     sendMessage(freedomModelBytes, freedomModelColor, "自由模式");
                     LOGGER.info("开始切换自由模式成功");
                 } catch (Exception ex) {
-                    LOGGER.error("开始切换自由模式失败",e);
+                    LOGGER.error("开始切换自由模式失败", e);
                     JOptionPane.showMessageDialog(null, ex.getMessage(), "操作失败", JOptionPane.OK_OPTION);
                 }
             }
@@ -110,7 +113,7 @@ public class DeviceUI extends Component{
                     sendMessage(noneModelBytes, noneModelColor, "六色模式");
                     LOGGER.info("开始切换无色模式成功");
                 } catch (Exception ex) {
-                    LOGGER.error("开始切换无色模式失败",e);
+                    LOGGER.error("开始切换无色模式失败", e);
                     JOptionPane.showMessageDialog(null, ex.getMessage(), "操作失败", JOptionPane.OK_OPTION);
                 }
             }
@@ -118,7 +121,7 @@ public class DeviceUI extends Component{
     }
 
     public void sendMessage(String byteString, String color, String state) throws Exception {
-        LOGGER.info("发送消息 ：{}  界面颜色 ： {}" , byteString,color);
+        LOGGER.info("发送消息 ：{}  界面颜色 ： {}", byteString, color);
         final MessageTransport messageTransport = MessageTransportFactory.create(new DeviceAddress(DeviceAddress.LinkType.COM, 串口ComboBox.getSelectedItem().toString()));
         try {
             try {
@@ -163,4 +166,5 @@ public class DeviceUI extends Component{
         frame.pack();
         frame.setVisible(true);
     }
+
 }
